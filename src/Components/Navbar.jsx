@@ -3,6 +3,9 @@ import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
+
+   
+
   return (
     <div className="">
       <div className="navbar bg-base-100 shadow-sm h-[70px] w-[100vw]  items-center  mx-auto px-3 lg:px-20 sm:px-12 md:px-16">
