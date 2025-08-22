@@ -1,103 +1,166 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <div className="carousel w-full h-[500px]">
+        {/* Slide 1 */}
+        <div id="slide1" className="carousel-item relative w-full h-[500px]">
+          <Image
+            src="https://i.ibb.co/0pMwDSnr/banner-2.jpg"
+            alt="Slide 1 banner"
+            fill
+            className="brightness-50 object-cover"
+          />
+          <div className="absolute top-[25%] left-[10%]">
+            <p className="xl:text-6xl lg:text-4xl md:text-2xl sm:text-4xl text-xl text-white font-bold">
+              Welcome to your smart and reliable -- <br /> university hostel
+              companion!
+            </p>
+            <p className="text-white mt-2 lg:text-[16px] text-[14px]">
+              Manage meals, share your reviews, and stay informed — <br />
+              all in one place. Designed to make hostel life simpler, smarter,
+              and more enjoyable.
+            </p>
+            <div className="flex mt-4">
+              <button className="text-white border-2 border-whit w-[140px] h-[45px] rounded-tl-2xl rounded-bl-2xl text-xl cursor-pointer hover:bg-white hover:text-black">
+                <i className="fa-brands fa-wpexplorer"></i>
+                <span className="ml-1">Explore</span>
+              </button>
+              <button className="text-white border-2 border-white w-[140px] h-[45px] rounded-tr-2xl rounded-br-2xl text-xl cursor-pointer hover:bg-white hover:text-black">
+                <i className="fa-brands fa-readme"></i>
+                <span className="ml-1">Read</span>
+              </button>
+            </div>
+          </div>
+          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+            <a href="#slide4" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide2" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        {/* Slide 2 */}
+        <div id="slide2" className="carousel-item relative w-full h-[500px]">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="https://i.ibb.co/svVc6c7G/banner-1.jpg"
+            alt="Slide 2 banner"
+            fill
+            className="brightness-50 object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <div className="absolute top-[25%] left-[10%]">
+            <p className="xl:text-6xl lg:text-4xl md:text-2xl sm:text-4xl text-xl text-white font-bold">
+              Simplifying daily meals with a <br /> system built for every
+              hostel student.
+            </p>
+            <p className="text-white mt-2 lg:text-[16px] text-[14px]">
+              View your meal schedule, check what’s being served, <br />
+              and give feedback — all from your dashboard. Convenience right at
+              your fingertips.
+            </p>
+            <div className="flex mt-4">
+              <button className="text-white border-2 border-whit w-[140px] h-[45px] rounded-tl-2xl rounded-bl-2xl text-xl cursor-pointer hover:bg-white hover:text-black">
+                <i className="fa-brands fa-wpexplorer"></i>
+                <span className="ml-1">Explore</span>
+              </button>
+              <button className="text-white border-2 border-white w-[140px] h-[45px] rounded-tr-2xl rounded-br-2xl text-xl cursor-pointer hover:bg-white hover:text-black">
+                <i className="fa-brands fa-readme"></i>
+                <span className="ml-1">Read</span>
+              </button>
+            </div>
+          </div>
+          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+            <a href="#slide1" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide3" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
+        </div>
+
+        {/* Slide 3 */}
+        <div id="slide3" className="carousel-item relative w-full h-[500px]">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="https://i.ibb.co/xWNqV5t/banner-3.jpg"
+            alt="Slide 3 banner"
+            fill
+            className="brightness-50 object-cover"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <div className="absolute top-[25%] left-[10%]">
+            <p className="xl:text-6xl lg:text-4xl md:text-2xl sm:text-4xl text-xl text-white font-bold">
+              Powerful tools to help admins manage meals, <br /> student data,
+              and feedback.
+            </p>
+            <p className="text-white mt-2 lg:text-[16px] text-[14px]">
+              Empower administrators with real-time tools to <br />
+              manage meals, track student reviews, <br /> and keep the hostel
+              running smoothly.
+            </p>
+            <div className="flex mt-4">
+              <button className="text-white border-2 border-whit w-[140px] h-[45px] rounded-tl-2xl rounded-bl-2xl text-xl cursor-pointer hover:bg-white hover:text-black">
+                <i className="fa-brands fa-wpexplorer"></i>
+                <span className="ml-1">Explore</span>
+              </button>
+              <button className="text-white border-2 border-white w-[140px] h-[45px] rounded-tr-2xl rounded-br-2xl text-xl cursor-pointer hover:bg-white hover:text-black">
+                <i className="fa-brands fa-readme"></i>
+                <span className="ml-1">Read</span>
+              </button>
+            </div>
+          </div>
+          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+            <a href="#slide2" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide4" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
+        </div>
+
+        {/* Slide 4 */}
+        <div id="slide4" className="carousel-item relative w-full h-[500px]">
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="https://i.ibb.co/zW064Rr3/banner-4.jpg"
+            alt="Slide 4 banner"
+            fill
+            className="brightness-50 object-cover"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div className="absolute top-[25%] left-[10%]">
+            <p className="xl:text-6xl lg:text-4xl md:text-2xl sm:text-4xl text-xl text-white font-bold">
+              Share your honest feedback to help <br /> improve the hostel
+              dining experience.
+            </p>
+            <p className="text-white mt-2 lg:text-[16px] text-[14px]">
+              Rate your meals, write honest reviews, <br />
+              and help shape a better dining experience for everyone in the
+              hostel.
+            </p>
+            <div className="flex mt-4">
+              <button className="text-white border-2 border-whit w-[140px] h-[45px] rounded-tl-2xl rounded-bl-2xl text-xl cursor-pointer hover:bg-white hover:text-black">
+                <i className="fa-brands fa-wpexplorer"></i>
+                <span className="ml-1">Explore</span>
+              </button>
+              <button className="text-white border-2 border-white w-[140px] h-[45px] rounded-tr-2xl rounded-br-2xl text-xl cursor-pointer hover:bg-white hover:text-black">
+                <i className="fa-brands fa-readme"></i>
+                <span className="ml-1">Read</span>
+              </button>
+            </div>
+          </div>
+          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 justify-between">
+            <a href="#slide3" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide1" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
