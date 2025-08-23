@@ -8,7 +8,7 @@ const page = () => {
         <h2 className="mb-3 text-3xl font-semibold text-center">
           Login to your account
         </h2>
-        <p className="text-sm text-center dark:text-gray-600">
+        {/* <p className="text-sm text-center dark:text-gray-600">
           Don't have account?
           <Link href='/signup'
            rel="noopener noreferrer"
@@ -19,13 +19,13 @@ const page = () => {
             Sign up here
           
           </Link>
-        </p>
-        <div className="my-6 space-y-4">
+        </p> */}
+        <div className="my-6 space-y-4 ">
           <button
             
             aria-label="Login with Google"
             type="button"
-            className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600"
+            className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600 cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const page = () => {
           </button>
           
         </div>
-        <div className="flex items-center w-full my-4">
+        {/* <div className="flex items-center w-full my-4">
           <hr className="w-full dark:text-gray-600" />
           <p className="px-3 dark:text-gray-600">OR</p>
           <hr className="w-full dark:text-gray-600" />
@@ -85,7 +85,7 @@ const page = () => {
           >
             Log in
           </button>
-        </form>
+        </form> */}
       </div>
     </div>
     );

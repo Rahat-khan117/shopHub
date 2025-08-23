@@ -1,22 +1,20 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className={`px-4 divide-y bg-[#c0d8d4] `}>
+        <footer className={`px-4 divide-y bg-white `}>
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
-          <div
-            
-            className="flex items-center gap-2 cursor-pointer"
-          >
-            <img
-              className="h-[50px] w-[50px] rounded-2xl"
-              src="https://i.ibb.co/d4qQJ4qK/logo.jpg"
-            />
-            <p className="text-4xl font-bold">
-              Meal<span className="text-green-600">Nest</span>
-            </p>
-          </div>
+          
+            <div>
+                <Link href={"/"} className="flex items-center cursor-pointer">
+            <Image src={"/logo.png"} width={60} height={60}></Image>
+            <p className="text-3xl sm:text-4xl font-bold">Shop<span className="text-blue-900">Hub</span></p>
+          </Link >
+            </div>
+          
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">

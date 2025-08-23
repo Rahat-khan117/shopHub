@@ -138,7 +138,7 @@ const page = () => {
             <div className="my-3 sm:w-[50%]">
               <label className="text-xl">User Name</label>
               <input
-                
+                placeholder="Enter the Photo Url"
                 name="user_name"
                 type="text"
                 className="w-full h-[35px] mt-2.5 px-3 text-gray-900 focus:ring-violet-600 border-gray-300 bg-white
