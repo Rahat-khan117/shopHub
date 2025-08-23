@@ -1,7 +1,13 @@
+"use client";
+
 import Link from 'next/link';
 import React from 'react';
+import { signIn, useSession } from "next-auth/react";
 
 const page = () => {
+
+   
+
     return (
         <div className="flex justify-center mt-6 pb-10">
       <div className="w-full max-w-md bg-white p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800">
@@ -22,7 +28,7 @@ const page = () => {
         </p> */}
         <div className="my-6 space-y-4 ">
           <button
-            
+            onClick={() => signIn("google", { callbackUrl: "/products" })}
             aria-label="Login with Google"
             type="button"
             className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600 cursor-pointer"

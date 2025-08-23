@@ -2,9 +2,11 @@
 
 import React from 'react';
 import Swal from 'sweetalert2';
+import { useSession } from "next-auth/react";
+import Image from 'next/image';
 
 const page = () => {
-
+const { data: session } = useSession();
     const handleSubmit = (e) => {
         e.preventDefault();
         
@@ -59,6 +61,61 @@ const page = () => {
 
     return (
         <div className="container mx-auto sm:px-12 px-4 pb-10">
+
+   <div className="mt-12 ">
+        <p className="text-3xl text-green-600 font-bold text-center sm:text-start">
+          User Profile
+        </p>
+        <div className="flex md:flex-row flex-col justify-between">
+          <div className="mt-4 flex sm:flex-row flex-col items-center gap-7">
+            <div>
+              
+                <Image
+  src={session?.user?.image || "/default-user.png"} // fallback if no image
+  alt="User Profile"
+  width={200}
+  height={200}
+  className="rounded-3xl"
+/>
+            </div>
+            <div className="flex flex-col gap-3">
+              <p className="text-xl font-bold">
+                Name:
+                
+                    <span className="text-[#000000a2]">
+                  {session?.user?.name}
+                </span>
+                
+                
+                
+              </p>
+              <p className="text-xl font-bold">
+                Email:
+                
+                    <span className="text-[#000000a2]">
+                  {session?.user?.email}
+                </span>
+                
+              </p>
+              
+              
+              
+            </div>
+          </div>
+          <div className="w-[35%] hidden md:block">
+            <img
+              className="rounded-3xl"
+              src="https://i.ibb.co/PZwHw8zy/profile.jpg"
+            />
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
       <div className="bg-gradient-to-br from-lime-200 via-green-300 to-emerald-200 mt-10 sm:px-12 px-6 py-9 rounded-3xl shadow-2xl">
         <div>
           <p className="font-bold text-5xl text-[#331A15] text-center">
@@ -138,7 +195,8 @@ const page = () => {
             <div className="my-3 sm:w-[50%]">
               <label className="text-xl">User Name</label>
               <input
-                placeholder="Enter the Photo Url"
+                value={session ? `${session.user.name}` : ""}
+                readOnly
                 name="user_name"
                 type="text"
                 className="w-full h-[35px] mt-2.5 px-3 text-gray-900 focus:ring-violet-600 border-gray-300 bg-white
@@ -148,7 +206,8 @@ const page = () => {
             <div className="my-3 sm:w-[50%]">
               <label className="text-xl">Email address</label>
               <input
-                
+                value={session ? `${session.user.email}` : ""}
+                readOnly
                 name="email_address"
                 type="text"
                 className="w-full h-[35px] mt-2.5 px-3 text-gray-900 focus:ring-violet-600 border-gray-300 bg-white

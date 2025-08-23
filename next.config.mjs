@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-    domains: ["i.ibb.co"], // Add the external domain here
+  images: {
+    domains: ["i.ibb.co", "lh3.googleusercontent.com"], // ✅ both domains
   },
 };
 

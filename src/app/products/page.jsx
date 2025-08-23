@@ -4,8 +4,9 @@ const page = async () => {
   const res = await fetch("https://shopping-hub-server-lovat.vercel.app/meals");
   const meals = await res.json();
   return (
-    <div className="mt-6">
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-5 px-4 sm:px-7 md:px-10 lg:px-16">
+    <div className="mt-12 mb-8 px-4 sm:px-7 md:px-10 lg:px-16">
+        <p className="text-3xl font-bold">All Meals</p>
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-5 mt-9">
         {meals.map((meal) => (
           <div className="bg-[#d5ead2] h-[480px] rounded-xl px-4 py-4 shadow-2xl">
             <img
