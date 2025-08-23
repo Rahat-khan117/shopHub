@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
+import SpCard from "@/Components/SpCard";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch("https://shopping-hub-server-lovat.vercel.app/meals");
+  const meals = await res.json();
   return (
     <div>
       <div className="carousel w-full h-[500px]">
@@ -161,6 +164,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+      {/* special meals */}
+
+       <div>
+        <SpCard meals={meals}></SpCard>
+       </div>
+
     </div>
   );
 }

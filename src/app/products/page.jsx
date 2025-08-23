@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const page = async () => {
@@ -21,24 +22,14 @@ const page = async () => {
             </p>
             <div className="flex justify-between  items-center">
               <p className="text-xl font-bold">{meal.meal_category}</p>
-              <button
-                //  onClick={()=>{
-                //     if(userN) {
-                //         navigate(`/mealDetails/${meal._id}`);
-                //     } else {
-                //         Swal.fire({
-                //                     title: "warning!",
-                //                     text: " For access this page you have to login first",
-                //                     icon: "warning",
-                //                     confirmButtonText: "OK",
-                //                   });
-                //          navigate('/login')
-                //     }
-                //  }}
+              <Link href={`/details/${meal._id}`}>
+                <button
+                
                 className="btn text-[17px] mt-3 w-[100px] bg-green-500 text-white rounded-4xl text-4 float-right"
               >
                 Details
               </button>
+              </Link>
             </div>
           </div>
         ))}
